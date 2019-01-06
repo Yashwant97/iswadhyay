@@ -4,5 +4,5 @@ export class Experience{
     start:Date=null
     end:Date | string=null
     description:string=null
-    url?:string=null
+    url?:string=null    // url of organisation or url of work done
 }
