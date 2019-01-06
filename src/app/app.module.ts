@@ -9,11 +9,27 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { ProfilesComponent } from './profiles/profiles.component';
+import { ProfileComponent } from './profiles/profile/profile.component';
+import { ProfileCardComponent } from './profiles/profile-card/profile-card.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
+import { ProjectCardComponent } from './projects/project-card/project-card.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninComponent,
+    SignupComponent,
+    ProfilesComponent,
+    ProfileComponent,
+    ProfileCardComponent,
+    ProjectsComponent,
+    ProjectDetailsComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
