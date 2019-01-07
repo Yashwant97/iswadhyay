@@ -1,8 +1,8 @@
 export class Experience{
-    organisation:string=null
-    position:string=null
-    start:Date=null
-    end:Date | string=null
-    description:string=null
-    url?:string=null    // url of organisation or url of work done
+    organisation?:string=""
+    position?:string=""
+    start?:Date| string=""
+    end?:Date | string=""
+    description?:string=""
+    url?:string=""    // url of organisation or url of work done
 }

@@ -1,4 +1,4 @@
 export class Skill{
-    skill:string=null   // skill name
-    level:string=null   // skill level ie beginner intermediate or advance
+    name:string=""   // skill name
+    level:string=""   // skill level ie beginner intermediate or advance
 }

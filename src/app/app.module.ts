@@ -20,6 +20,7 @@ import { ProjectDetailsComponent } from './projects/project-details/project-deta
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { AccountComponent } from './account/account.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
+import { SpinnerComponent } from './ui/spinner/spinner.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { NavbarComponent } from './ui/navbar/navbar.component';
     ProjectDetailsComponent,
     ProjectCardComponent,
     AccountComponent,
-    NavbarComponent
+    NavbarComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

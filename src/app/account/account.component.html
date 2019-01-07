@@ -1,3 +1,45 @@
 <p>
   account works!
 </p>
+<input type="text" [(ngModel)]="user.firstname" placeholder="first name">
+<input type="text" [(ngModel)]="user.lastname" name="lastname" placeholder="last name">
+<select [(ngModel)]="user.gender" name="gender">
+  <option value="male">male</option>
+  <option value="female">female</option>
+</select>
+<input type="date" [(ngModel)]="user.doteofbirth" name="dateofbirth" placeholder="dob">
+<input type="number" [(ngModel)]="user.phone" placeholder="phone" name="phone"><br><br>
+
+
+<input type="text" [(ngModel)]="skill.name" placeholder="skill name">
+<input type="text" [(ngModel)]="skill.level" placeholder="skill level"><br>
+<ng-container *ngFor="let skill of user.skills">
+  {{skill.name}} {{skill.level}}
+</ng-container>
+<button (click)="addSkill()">add skill</button><br><br>
+
+
+<input type="text" [(ngModel)]="education.institute"placeholder="institiute">
+<input type="text" [(ngModel)]="education.category" placeholder="categoty">
+<input type="text" [(ngModel)]="education.subject" placeholder="subject">
+<input type="text" [(ngModel)]="education.grade" placeholder="grade">
+<input type="number" [(ngModel)]="education.yearofpassing" placeholder="year of pass"><br>
+<ng-container *ngFor="let education of user.education">
+  {{education.institute}} {{education.grade}}
+</ng-container>
+<button (click)="addEducation()">add education</button><br><br>
+
+
+<input type="text" [(ngModel)]="experience.organisation" placeholder="organisation">
+<input type="text" [(ngModel)]="experience.position" placeholder="position">
+<input type="text" [(ngModel)]="experience.url" placeholder="url">
+<input type="text" [(ngModel)]="experience.description" placeholder="description">
+<input type="date" [(ngModel)]="experience.start" placeholder="start">
+<input type="date" [(ngModel)]="experience.end" placeholder="end">
+<button (click)="addExperience()">add experience</button><br><br>
+<ng-container *ngFor="let experience of user.experience">
+  {{experience.organisation}} {{experience.start| date}}
+</ng-container>
+
+
+<button (click)="save()">save</button>

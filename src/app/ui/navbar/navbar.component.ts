@@ -13,8 +13,13 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  openSignin(){
-    this.router.navigate(['/signin'])
+  openAccount(){
+    this.router.navigate(['/account'])
   }
+
+  openProfiles(){
+    this.router.navigate(['/profiles'])
+  }
+
 
 }

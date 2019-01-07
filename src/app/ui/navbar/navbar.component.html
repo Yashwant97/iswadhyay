@@ -1,4 +1,6 @@
 <p>
   navbar works!
   <button *ngIf="auth.isLoggedIn()" (click)="auth.logout()">log out</button>
+  <button *ngIf="auth.isLoggedIn()" (click)="openAccount()">Account</button>
+  <button *ngIf="auth.isLoggedIn()" (click)="openProfiles()">Profiles</button>
 </p>

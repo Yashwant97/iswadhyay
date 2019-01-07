@@ -60,6 +60,11 @@ logout() {
     .then((res) => this.router.navigate(['/signin']));
     console.log('logged out')
   }
+getUid(){
+  if(this.isLoggedIn()){
+    return this.userDetails.uid
+  }
+}
 }
 
 
