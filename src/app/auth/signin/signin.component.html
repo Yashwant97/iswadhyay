@@ -1,3 +1,14 @@
 <p>
   signin works!
 </p>
+<form (ngSubmit)="signin(f)" #f="ngForm">
+  <input type="email" placeholder="email" name="email" ngModel required>
+  <input type="password" placeholder="password" name="password" ngModel required>
+  <button type="submit">Sign in</button>
+</form>
+<button *ngIf="!auth.isLoggedIn()" (click)="auth.signInWithGoogle()">sign in with google</button>
+<button *ngIf="!auth.isLoggedIn()" (click)="auth.signInWithFacebook()">sign in with facebook</button>
+<button *ngIf="auth.isLoggedIn()" (click)="auth.logout()">log out</button>
+
+<h2>Or</h2>
+<button (click)="signup()">Sign Up</button>
