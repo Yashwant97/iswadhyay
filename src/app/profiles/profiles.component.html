@@ -1,3 +1,18 @@
+<!-- code to display all profile card and sort and filter functionality ui -->
 <p>
   profiles works!
+  <button (click)="viewAll()">click</button>
 </p>
+
+<ng-container *ngIf="mode=='list'">
+  <ng-container *ngFor="let item of users">
+      <app-profile-card [user]="item">
+        <button (click)="viewProfile(item)">view profile</button>
+      </app-profile-card>
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="mode=='profile'">
+  <app-profile [user]="user"></app-profile>
+</ng-container>
+

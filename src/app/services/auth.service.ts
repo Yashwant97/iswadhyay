@@ -4,6 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-
+  
   constructor() { }
+  signIn(){
+    // sign in using firebase auth (might take parameter it is unknoun at this time)
+  }
+  signOut(){
+    // using firebase auth
+  }
 }

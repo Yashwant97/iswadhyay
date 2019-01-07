@@ -8,8 +8,4 @@ import { User } from './models/user.model';
 })
 export class AppComponent {
   title = 'iswadhyay';
-  user=new User()
-  cons(){
-    console.log(this.user)
-  }
 }

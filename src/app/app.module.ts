@@ -17,6 +17,7 @@ import { ProfileCardComponent } from './profiles/profile-card/profile-card.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
+import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
     ProfileCardComponent,
     ProjectsComponent,
     ProjectDetailsComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
