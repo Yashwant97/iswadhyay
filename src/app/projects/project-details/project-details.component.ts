@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
 
 @Component({
@@ -7,11 +7,10 @@ import { Project } from 'src/app/models/project.model';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
-  project:Project
+  @Input('project') project:Project
   constructor() { }
 
   ngOnInit() {
-    this.project=null
     // code to get project with id taken from url and fetch from firestore using function
     // in project service 
   }
