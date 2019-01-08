@@ -5,6 +5,7 @@
   <button *ngIf="auth.isLoggedIn()" (click)="openProfiles()">Profiles</button>
 </p> -->
 <div class="w3-bar w3-border w3-card-4 w3-light-grey">
+    <button class="w3-bar-item w3-button" *ngIf="auth.isLoggedIn()" (click)="openProjects()">Projects</button>
     <button class="w3-bar-item w3-button" *ngIf="auth.isLoggedIn()" (click)="openProfiles()">Profiles</button>
     <button class="w3-bar-item w3-button" *ngIf="auth.isLoggedIn()" (click)="openAccount()">Account</button>
     <button class="w3-bar-item w3-button" *ngIf="auth.isLoggedIn()" (click)="auth.logout()">log out</button>

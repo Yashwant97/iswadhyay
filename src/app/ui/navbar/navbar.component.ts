@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit {
   openProfiles(){
     this.router.navigate(['/profiles'])
   }
+  openProjects(){
+    this.router.navigate(['/projects'])
+  }
 
 
 }
