@@ -10,7 +10,7 @@ export class User{
     profile_image?:string=""   // url
     video_resume?:string=""    //url
     dateofbirth?:Date= null
-    phone?:number=100
+    phone?:number=0
     gender?:string=""          
     skills?:Skill[]=[]           // as imported
     experience?:Experience[]=[]
