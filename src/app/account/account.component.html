@@ -11,32 +11,44 @@
 <input type="number" [(ngModel)]="user.phone" placeholder="phone" name="phone"><br><br>
 
 
-<input type="text" [(ngModel)]="skill.name" placeholder="skill name">
-<input type="text" [(ngModel)]="skill.level" placeholder="skill level"><br>
+<!-- <input type="text" [(ngModel)]="skill.name" placeholder="skill name">
+<input type="text" [(ngModel)]="skill.level" placeholder="skill level"><br> -->
+<form (ngSubmit)="addSkill(formskill)" #formskill="ngForm">
+  <input type="text" name="skill" placeholder="skill" ngModel>
+  <input type="text" name="level" name="level" ngModel>
+  <button type="submit">add Skill</button>
+</form>
 <ng-container *ngFor="let skill of user.skills">
   {{skill.name}} {{skill.level}}
 </ng-container>
-<button (click)="addSkill()">add skill</button><br><br>
+<!-- <button (click)="addSkill()">add skill</button><br><br> -->
 
 
-<input type="text" [(ngModel)]="education.institute"placeholder="institiute">
-<input type="text" [(ngModel)]="education.category" placeholder="categoty">
-<input type="text" [(ngModel)]="education.subject" placeholder="subject">
-<input type="text" [(ngModel)]="education.grade" placeholder="grade">
-<input type="number" [(ngModel)]="education.yearofpassing" placeholder="year of pass"><br>
+<form (ngSubmit)="addEducation(eduform)" #eduform="ngForm">
+  <input type="text" ngModel name="institute" placeholder="institiute">
+<input type="text" ngModel name="categoty" placeholder="categoty">
+<input type="text" ngModelt name="subject" placeholder="subject">
+<input type="text" ngModel name="grade" placeholder="grade">
+<input type="number" ngModel name="yearofpassing" placeholder="year of pass">
+<button type="submit">add Education</button>
+</form>
+<br>
 <ng-container *ngFor="let education of user.education">
   {{education.institute}} {{education.grade}}
 </ng-container>
-<button (click)="addEducation()">add education</button><br><br>
+<!-- <button (click)="addEducation()">add education</button><br><br> -->
 
 
-<input type="text" [(ngModel)]="experience.organisation" placeholder="organisation">
-<input type="text" [(ngModel)]="experience.position" placeholder="position">
-<input type="text" [(ngModel)]="experience.url" placeholder="url">
-<input type="text" [(ngModel)]="experience.description" placeholder="description">
-<input type="date" [(ngModel)]="experience.start" placeholder="start">
-<input type="date" [(ngModel)]="experience.end" placeholder="end">
-<button (click)="addExperience()">add experience</button><br><br>
+<form (ngSubmit)="addExperience(expform)" #expform="ngForm">
+  <input type="text" ngModel name="organisation" placeholder="organisation">
+<input type="text" ngModel name="position" placeholder="position">
+<input type="text" ngModel name="url" placeholder="url">
+<input type="text" ngModel name="description" placeholder="description">
+<input type="date" ngModel name="start" placeholder="start">
+<input type="date" ngModel name="end" placeholder="end">
+<button type="submit">add Experience</button>
+</form>
+<!-- <button (click)="addExperience()">add experience</button> --><br><br>
 <ng-container *ngFor="let experience of user.experience">
   {{experience.organisation}} {{experience.start| date}}
 </ng-container>

@@ -4,6 +4,7 @@ import { User } from '../models/user.model';
 import { Skill } from '../models/skill.model';
 import { Education } from '../models/education.model';
 import { Experience } from '../models/experience.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-account',
@@ -12,9 +13,6 @@ import { Experience } from '../models/experience.model';
 })
 export class AccountComponent implements OnInit {
   user=new User()
-  skill=new Skill()
-  education=new Education()
-  experience=new Experience()
   constructor(private accountservice:AccountService) {
    }
 
@@ -33,17 +31,14 @@ export class AccountComponent implements OnInit {
     console.log(this.user)
     this.accountservice.updateAccount(this.user)
   }
-  addSkill(){
-    this.user.skills.push(Object.assign({},this.skill))
-    this.skill=new Skill()
+  addSkill(form:NgForm){
+    this.user.skills.push(form.value)
   }
-  addEducation(){
-    this.user.education.push(Object.assign({},this.education))
-    this.education=new Education()
+  addEducation(form:NgForm){
+    this.user.education.push(form.value)
   }
-  addExperience(){
-    this.user.experience.push(Object.assign({},this.experience))
-    this.experience=new Experience()
+  addExperience(form:NgForm){
+    this.user.experience.push(form.value)
   }
 
 }

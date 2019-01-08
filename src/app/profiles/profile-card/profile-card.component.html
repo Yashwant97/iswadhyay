@@ -2,8 +2,25 @@
   code for a single profile card that will be displayed in all profiles page 
   display properties of variable user given in input
 -->
-<p>
+<!-- <p>
   profile-card works!
   {{user.firstname}}
   <ng-content></ng-content>
-</p>
+</p> -->
+
+<div class="w3-col l3 m6">
+    <div class="w3-display-container">
+          <div class="w3-card w3-round w3-white w3-margin">
+                  <div class="w3-container">       
+                   <p class="w3-center"><img src="{{user.profile_img}}" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                   <h4 class="w3-center">{{user.firstname}} {{user.lastname}}</h4>
+                   <hr>   
+                   <p>
+                     <span>skills</span><br>
+                     <span class="w3-tag w3-small w3-pale-red" *ngFor="let skill of user.skills">{{skill.skill}}</span>
+                   </p>
+                   <ng-content></ng-content>
+                  </div>
+                </div>  
+    </div>
+</div>

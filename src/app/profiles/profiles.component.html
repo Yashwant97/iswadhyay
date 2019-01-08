@@ -1,13 +1,12 @@
 <!-- code to display all profile card and sort and filter functionality ui -->
 <p>
-  profiles works!
-  <button (click)="viewAll()">click</button>
+  <button *ngIf="mode=='profile'" (click)="viewAll()">back</button>
 </p>
 
 <ng-container *ngIf="mode=='list'">
   <ng-container *ngFor="let item of users">
       <app-profile-card [user]="item">
-        <button (click)="viewProfile(item)">view profile</button>
+        <button class="w3-block" (click)="viewProfile(item)">view profile</button>
       </app-profile-card>
   </ng-container>
 </ng-container>
